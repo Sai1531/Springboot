@@ -1,5 +1,3 @@
-FROM tomcat:latest
-WORKDIR webapps 
-COPY target/WebApp.war .
-RUN rm -rf ROOT && mv WebApp.war ROOT.war
-ENTRYPOINT ["sh", "/usr/local/tomcat/bin/startup.sh"]
+FROM tomcat:9.0
+ADD target/WebApp.war /usr/local/tomcat/webapps/
+CMD ["catalina.sh", "run"]
