@@ -18,12 +18,20 @@
   <build>
     <finalName>WebApp</finalName>
   </build>
-   <repositories>
-    <repository>
-      <id>maven-group</id>
-      <url>http://ec2-18-163-215-143.ap-east-1.compute.amazonaws.com:8081/repository/springboot-group/</url>
-    </repository>
-  </repositories>  
+  <repositories>
+  <repository>
+   <id>central</id>
+   <name>Internal Mirror of Central Repository</name>
+   <url>http://ec2-18-163-215-143.ap-east-1.compute.amazonaws.com:8081/repository/springboot-group/</url>
+  </repository>
+ </repositories>
+ <pluginRepositories>
+  <pluginRepository>
+   <id>central</id>
+   <name>Internal Mirror of Central Plugins Repository</name>
+   <url>http://ec2-18-163-215-143.ap-east-1.compute.amazonaws.com:8081/repository/springboot-group/</url>
+  </pluginRepository>
+ </pluginRepositories>
   <distributionManagement>
     <snapshotRepository>
       <id>nexus-snapshot</id>
